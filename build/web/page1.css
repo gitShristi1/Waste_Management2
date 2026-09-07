@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+/* Heading */
+
+.heading h1 {
+    font-size: 42px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 45px;
+}
+
+
+/* Cards */
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.account-card {
+    width: 400px;
+    background: white;
+
+    padding: 40px 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s ease;
+}
+
+.account-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Icon */
+
+.icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+
+/* Card heading */
+
+.account-card h2 {
+    font-size: 28px;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+
+/* Description */
+
+.account-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.buttons a {
+    text-decoration: none;
+
+    padding: 12px 28px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+
+/* Sign In */
+
+.signin-btn {
+    background: #2e7d32;
+    color: white;
+}
+
+.signin-btn:hover {
+    background: #1b5e20;
+}
+
+
+/* Sign Up */
+
+.signup-btn {
+    border: 2px solid #2e7d32;
+    color: #2e7d32;
+}
+
+.signup-btn:hover {
+    background: #2e7d32;
+    color: white;
+}
+
+
+/* Back button */
+
+.back {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    text-decoration: none;
+
+    color: #2e7d32;
+
+    font-weight: bold;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .account-card {
+        width: 90%;
+    }
+
+    .heading h1 {
+        font-size: 32px;
+    }
+}

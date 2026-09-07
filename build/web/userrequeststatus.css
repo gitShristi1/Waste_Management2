@@ -1,0 +1,393 @@
+
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f5f9f4;
+    color: #183c2b;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111;
+}
+
+.logo span {
+    color: #2e8b57;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2e8b57;
+}
+
+.nav-links a.active {
+    color: #2e8b57;
+    font-weight: 600;
+}
+
+
+/* PROFILE */
+
+.profile-btn {
+    padding: 9px 20px;
+
+    border: 1px solid #2e8b57;
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: #2e8b57;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.profile-btn:hover {
+    background: #2e8b57;
+    color: white;
+}
+
+
+/* =========================================
+   STATUS SECTION
+========================================= */
+
+.status {
+    min-height: calc(100vh - 155px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* =========================================
+   STATUS CARD
+========================================= */
+
+.status-card {
+    width: 520px;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 12px 35px rgba(24, 60, 43, 0.10);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e7f6ec;
+
+    color: #2e8b57;
+
+    font-size: 32px;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.subtitle {
+    color: #2e8b57;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+.status-card h1 {
+    font-size: 28px;
+
+    color: #183c2b;
+
+    margin-bottom: 12px;
+}
+
+.status-card h1 span {
+    color: #2e8b57;
+}
+
+.description {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #183c2b;
+}
+
+input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d5e1d8;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    font-family: "Inter", sans-serif;
+
+    background: #fbfdfb;
+}
+
+input:focus {
+    border-color: #2e8b57;
+
+    box-shadow:
+        0 0 0 3px rgba(46, 139, 87, 0.10);
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+form button {
+    width: 100%;
+
+    margin-top: 17px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2e8b57;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    font-family: "Inter", sans-serif;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #246b45;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   BACK
+========================================= */
+
+.back {
+    display: inline-block;
+
+    margin-top: 22px;
+
+    text-decoration: none;
+
+    color: #2e8b57;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.back:hover {
+    color: #183c2b;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #183c2b;
+
+    color: white;
+
+    padding: 18px 7%;
+}
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .status {
+        padding: 30px 15px;
+    }
+
+    .status-card {
+        padding: 30px 22px;
+    }
+
+    .status-card h1 {
+        font-size: 24px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+}

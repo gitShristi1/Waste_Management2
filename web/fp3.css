@@ -1,0 +1,413 @@
+/* =========================================
+   GENERAL STYLING
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #f5f9f4;
+    color: #183c2b;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    height: 80px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.logo-icon {
+    color: #2e9b59;
+    font-size: 30px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.navbar a {
+    text-decoration: none;
+
+    color: #52655b;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.navbar a:hover {
+    color: #299957;
+}
+
+
+/* =========================================
+   FORM SECTION
+========================================= */
+
+.form-section {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    background: linear-gradient(
+        120deg,
+        #f7faf6,
+        #e8f5e8
+    );
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.form-card {
+    width: 590px;
+
+    background: #ffffff;
+
+    padding: 43px 48px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(24, 60, 43, 0.08);
+}
+
+
+/* =========================================
+   FORM HEADING
+========================================= */
+
+.form-heading {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.form-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e5f4e8;
+
+    color: #299957;
+
+    font-size: 31px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.form-heading h1 {
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #183c2b;
+
+    margin-bottom: 8px;
+}
+
+.form-heading h1 span {
+    color: #299957;
+}
+
+.form-heading p {
+    color: #68776f;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #183c2b;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.form-group input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 16px;
+
+    border: 1px solid #cbdacf;
+
+    border-radius: 9px;
+
+    background: #f7faf8;
+
+    color: #183c2b;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+/* READONLY EMAIL
+========================================= */
+
+.form-group input[readonly] {
+    background: #edf4ee;
+
+    color: #52655b;
+
+    cursor: not-allowed;
+}
+
+
+/* COMPANY NAME INPUT
+========================================= */
+
+.form-group input:not([readonly]):focus {
+    border-color: #299957;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(41, 153, 87, 0.08);
+}
+
+.form-group input::placeholder {
+    color: #9aa9a0;
+}
+
+
+/* =========================================
+   BUTTON SECTION
+========================================= */
+
+.form-buttons {
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 27px;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.submit-btn {
+    width: 50%;
+    height: 49px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #299957;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 7px 15px rgba(41, 153, 87, 0.18);
+}
+
+.submit-btn:hover {
+    background: #25864d;
+}
+
+
+/* =========================================
+   RESET BUTTON
+========================================= */
+
+.reset-btn {
+    width: 50%;
+    height: 49px;
+
+    border: 1px solid #b9cfc0;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #183c2b;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.reset-btn:hover {
+    background: #f5f9f4;
+
+    border-color: #299957;
+}
+
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.back {
+    text-align: center;
+
+    margin-top: 24px;
+}
+
+.back-link {
+    text-decoration: none;
+
+    color: #365b48;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+.back-link:hover {
+    color: #299957;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #183c2b;
+
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .form-card {
+        width: 100%;
+        padding: 35px 25px;
+    }
+
+    .form-heading h1 {
+        font-size: 26px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .submit-btn,
+    .reset-btn {
+        width: 100%;
+    }
+}

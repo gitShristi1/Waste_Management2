@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoCycle - User Sign In</title>
+
+    <link rel="stylesheet" href="User_signin.css">
+</head>
+
+<body>
+
+    <div class="signin-container">
+
+        <div class="signin-card">
+
+            <!-- Logo -->
+            <div class="logo">
+                <span class="logo-icon">♻</span>
+                Eco<span>Cycle</span>
+            </div>
+
+            <h1>User Sign In</h1>
+
+            <p class="subtitle">
+                Welcome back! Sign in to continue.
+            </p>
+
+
+            <!-- Sign In Form -->
+            <form method="post" action="UserSignIn1" name="signin">
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Forgot Password -->
+                <div class="forgot-container">
+
+                    <a href="Forgot_Pass.html">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <!-- Sign In -->
+                <input
+                    type="submit"
+                    class="signin-button"
+                    value="Submit"
+                >
+
+            </form>
+
+
+            <!-- Sign Up -->
+            <p class="signup-text">
+                Don't have an account?
+
+                <a href="User_signup.html">
+                    Sign Up
+                </a>
+            </p>
+
+
+            <!-- Back -->
+            <a href="page1.html" class="back-link">
+                ← Back
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

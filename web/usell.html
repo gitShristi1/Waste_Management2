@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>EcoCycle - Sell Waste</title>
+
+<link rel="stylesheet" href="usell.css">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+
+<script>
+
+    function validateForm() {
+
+        var a = document.forms["usell"]["waste"].value;
+        var b = document.forms["usell"]["waste_pic"].value;
+        var d = document.forms["usell"]["loc"].value;
+        var e = document.forms["usell"]["weight"].value;
+        var f = document.forms["usell"]["id"].value;
+
+        if (
+            (a == null || a == "") &&
+            (b == null || b == "") &&
+            (d == null || d == "") &&
+            (e == null || e == "") &&
+            (f == null || f == "")
+        ) {
+
+            alert("No fields are filled!!");
+
+            document.forms["usell"]["waste"].focus();
+
+            return false;
+        }
+
+
+        if (f == null || f == "") {
+
+            alert("Enter email id");
+
+            document.forms["usell"]["id"].value = "";
+            document.forms["usell"]["id"].focus();
+
+            return false;
+        }
+
+
+        if (a == null || a == "") {
+
+            alert("Enter the type of waste");
+
+            document.forms["usell"]["waste"].value = "";
+            document.forms["usell"]["waste"].focus();
+
+            return false;
+        }
+
+
+        if (e == null || e == "") {
+
+            alert("Enter the weight of the waste.");
+
+            document.forms["usell"]["weight"].value = "";
+            document.forms["usell"]["weight"].focus();
+
+            return false;
+        }
+
+
+        if (b == null || b == "") {
+
+            alert("Insert a picture");
+
+            document.forms["usell"]["waste_pic"].value = "";
+            document.forms["usell"]["waste_pic"].focus();
+
+            return false;
+        }
+
+
+        if (d == null || d == "") {
+
+            alert("Enter the location for pickup.");
+
+            document.forms["usell"]["loc"].value = "";
+            document.forms["usell"]["loc"].focus();
+
+            return false;
+        }
+
+
+        return true;
+    }
+
+
+
+    function calculateCost() {
+
+        var waste = document.getElementById("waste").value;
+        var weight = document.getElementById("weight").value;
+
+        var rate = 0;
+        var cost = 0;
+        var commission = 0;
+        var companyCost = 0;
+
+
+        if (waste == "ScrapMetal") {
+
+            rate = 0.30;
+
+        }
+        else if (waste == "PaperAndCardboard") {
+
+            rate = 0.05;
+
+        }
+        else if (waste == "ElectronicWaste") {
+
+            rate = 0.70;
+
+        }
+        else if (waste == "PlasticAndGlass") {
+
+            rate = 0.15;
+
+        }
+
+
+        if (waste != "" && weight > 0) {
+
+            /* Calculate total waste cost */
+
+            cost = weight * rate;
+
+
+            /* Calculate 5% commission */
+
+            commission = cost * 0.05;
+
+
+            /* Company Cost = Cost + Commission */
+
+            companyCost = cost + commission;
+
+
+            /* Display Estimated Value */
+
+            document.getElementById("cost").innerHTML =
+                "&#8377;" + cost.toFixed(2);
+
+
+            /* Display Commission */
+
+            document.getElementById("commission").innerHTML =
+                "&#8377;" + commission.toFixed(2);
+
+
+            /* Display Company Cost */
+
+            document.getElementById("company_cost").innerHTML =
+                "&#8377;" + companyCost.toFixed(2);
+
+
+            /* Store values for servlet */
+
+            document.getElementById("cost_value").value =
+                cost.toFixed(2);
+
+
+            document.getElementById("commission_value").value =
+                commission.toFixed(2);
+
+
+            document.getElementById("company_cost_value").value =
+                companyCost.toFixed(2);
+
+        }
+        else {
+
+            document.getElementById("cost").innerHTML = "--";
+
+            document.getElementById("commission").innerHTML = "--";
+
+            document.getElementById("company_cost").innerHTML = "--";
+
+
+            document.getElementById("cost_value").value = "";
+
+            document.getElementById("commission_value").value = "";
+
+            document.getElementById("company_cost_value").value = "";
+
+        }
+
+    }
+
+</script>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <span class="logo-icon">
+            &#9851;
+        </span>
+
+        <span>
+
+            <font color="black">Eco</font>
+            <font color="green">Cycle</font>
+
+        </span>
+
+    </div>
+
+
+    <nav class="navbar">
+
+        <a href="#">Home</a>
+
+        <a href="#">About</a>
+
+        <a href="#">Services</a>
+
+        <a href="#">Contact</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= SELL SECTION ================= -->
+
+<section class="form-section">
+
+    <div class="form-card">
+
+
+        <!-- HEADING -->
+
+        <div class="form-heading">
+
+            <div class="form-icon">
+                &#9851;
+            </div>
+
+            <h1>
+                Sell Your <span>Waste</span>
+            </h1>
+
+            <p>
+                Submit your recyclable waste and schedule
+                a convenient pickup.
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= FORM ================= -->
+
+        <form name="usell"
+              method="post"
+              action="usell"
+              enctype="multipart/form-data"
+              onsubmit="return validateForm()">
+
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label>
+                    Email Id
+                    <font color="red">*</font>
+                </label>
+
+                <input type="email"
+                       name="id"
+                       placeholder="Type your Email id">
+
+            </div>
+
+
+
+            <!-- WASTE TYPE -->
+
+            <div class="form-group">
+
+                <label>
+                    Type of Waste
+                    <font color="red">*</font>
+                </label>
+
+                <select name="waste"
+                        id="waste"
+                        onchange="calculateCost()">
+
+                    <option value=""
+                            selected
+                            disabled>
+
+                        Select
+
+                    </option>
+
+
+                    <option value="ScrapMetal">
+
+                        Scrap Metal
+
+                    </option>
+
+
+                    <option value="PaperAndCardboard">
+
+                        Paper and Cardboard
+
+                    </option>
+
+
+                    <option value="ElectronicWaste">
+
+                        Electronic Waste
+
+                    </option>
+
+
+                    <option value="PlasticAndGlass">
+
+                        Plastic and Glass
+
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- WEIGHT -->
+
+            <div class="form-group">
+
+                <label>
+
+                    Weight of Waste (in grams)
+
+                    <font color="red">*</font>
+
+                </label>
+
+
+                <input type="number"
+                       name="weight"
+                       id="weight"
+                       placeholder="Enter weight in grams"
+                       min="1"
+                       oninput="calculateCost()">
+
+            </div>
+
+
+
+            <!-- ================= COST ================= -->
+
+            <div class="cost-box">
+
+                <span>
+                    Estimated Value
+                </span>
+
+                <strong id="cost">
+                    --
+                </strong>
+
+            </div>
+
+
+
+            <!-- ================= COMMISSION ================= -->
+
+            <div class="cost-box">
+
+                <span>
+                    Commission (5%)
+                </span>
+
+                <strong id="commission">
+                    --
+                </strong>
+
+            </div>
+
+
+
+            <!-- ================= COMPANY COST ================= -->
+
+            <div class="cost-box">
+
+                <span>
+                    Company Cost
+                </span>
+
+                <strong id="company_cost">
+                    --
+                </strong>
+
+            </div>
+
+
+
+            <!-- ================= HIDDEN VALUES ================= -->
+
+            <input type="hidden"
+                   name="cost"
+                   id="cost_value">
+
+
+            <input type="hidden"
+                   name="commission"
+                   id="commission_value">
+
+
+            <input type="hidden"
+                   name="company_cost"
+                   id="company_cost_value">
+
+
+
+            <!-- ================= IMAGE UPLOAD ================= -->
+
+            <div class="form-group">
+
+                <label>
+
+                    Upload Picture
+
+                    <font color="red">*</font>
+
+                </label>
+
+
+                <div class="upload-box">
+
+                    <div class="file-option">
+
+                        <label>
+                            Image
+                        </label>
+
+
+                        <input type="file"
+                               name="waste_pic"
+                               accept="image/*">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= LOCATION ================= -->
+
+            <div class="form-group">
+
+                <label>
+
+                    Pickup Location
+
+                    <font color="red">*</font>
+
+                </label>
+
+
+                <textarea name="loc"
+                          placeholder="Enter location for pickup"
+                          rows="3"></textarea>
+
+            </div>
+
+
+
+            <!-- ================= EXTRA INFORMATION ================= -->
+
+            <div class="form-group">
+
+                <label>
+                    Extra Information
+                </label>
+
+
+                <textarea name="ei"
+                          placeholder="Enter any additional information..."
+                          rows="3"></textarea>
+
+            </div>
+
+
+
+            <!-- ================= BUTTONS ================= -->
+
+            <div class="form-buttons">
+
+                <input type="submit"
+                       value="Submit"
+                       class="submit-btn">
+
+
+                <input type="reset"
+                       value="Reset"
+                       class="reset-btn">
+
+            </div>
+
+        </form>
+
+
+
+        <!-- ================= BACK ================= -->
+
+        <div class="back">
+
+            <a href="page1.html">
+
+                &#8592; Back
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    © 2026 EcoWaste Management System
+    | Building a Cleaner Future &#9851;
+
+</footer>
+
+
+</body>
+
+</html>
+

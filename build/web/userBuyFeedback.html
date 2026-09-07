@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EcoCycle - Feedback</title>
+
+    <link rel="stylesheet" href="userBuyFeedback.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Eco<span>Cycle</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="HomeUser.html">
+                Home
+            </a>
+
+            <a href="userProducts">
+                Products
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="feedback-container">
+
+        <div class="feedback-card">
+
+
+            <!-- Icon -->
+
+            <div class="feedback-icon">
+                💚
+            </div>
+
+
+            <!-- Heading -->
+
+            <h1>
+                Your Feedback Matters
+            </h1>
+
+
+            <p class="subtitle">
+                Your feedback helps us improve EcoCycle
+                and create a better experience for everyone.
+            </p>
+
+
+
+            <!-- ================= FORM ================= -->
+
+            <form action="feedback" method="post">
+
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+
+
+                <!-- Rating -->
+
+                <div class="form-group">
+
+                    <label>
+                        How was your experience?
+                    </label>
+
+                    <div class="rating">
+
+                        <input
+                            type="radio"
+                            id="star5"
+                            name="rating"
+                            value="5"
+                            required>
+
+                        <label for="star5">★</label>
+
+
+                        <input
+                            type="radio"
+                            id="star4"
+                            name="rating"
+                            value="4">
+
+                        <label for="star4">★</label>
+
+
+                        <input
+                            type="radio"
+                            id="star3"
+                            name="rating"
+                            value="3">
+
+                        <label for="star3">★</label>
+
+
+                        <input
+                            type="radio"
+                            id="star2"
+                            name="rating"
+                            value="2">
+
+                        <label for="star2">★</label>
+
+
+                        <input
+                            type="radio"
+                            id="star1"
+                            name="rating"
+                            value="1">
+
+                        <label for="star1">★</label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Feedback -->
+
+                <div class="form-group">
+
+                    <label for="feedback">
+                        Your Feedback
+                    </label>
+
+                    <textarea
+                        id="feedback"
+                        name="feedback"
+                        rows="6"
+                        placeholder="Tell us about your experience..."
+                        required></textarea>
+
+                </div>
+
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="submit-btn">
+
+                    Submit Feedback
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- Back -->
+
+            <a
+                href="userProducts"
+                class="back-link">
+
+                ← Back to Products
+
+            </a>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+            EcoCycle 🌱 | Building a cleaner future
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EcoWaste - Company Registration</title>
+
+    <link rel="stylesheet" href="companySignup.css">
+    <script>
+
+function validateForm(){
+      var a = document.forms["myForm"]["company"].value;
+      var b = document.forms["myForm"]["regno"].value;
+
+      var c = document.forms["myForm"]["email"].value;
+      var d = document.forms["myForm"]["contact"].value;
+      var e = document.forms["myForm"]["location"].value;
+      var f = document.forms["myForm"]["password"].value;
+
+if((a==null || a=="")&&(b==null||b=="")&&(c==null||c=="")&&(d==null||d=="")&&(e==null||e=="")&&(f==null||f==""))
+{
+     alert("All fields are blank");
+     document.forms["myForm"]["company"].focus();
+     //to highlight this field
+     return false;
+
+}
+
+if(a==null || a==""){
+     alert("Company name is missing!");
+     document.forms["myForm"]["company"].focus();//to highlight this field
+     return false;
+}
+
+if(b==null || b==""){
+     alert("Company ID is missing!");
+     document.forms["myForm"]["regno"].focus();
+     return false;
+
+}
+
+if(c==null || c==""){
+     alert("Email ID must be filled out");
+     document.forms["myForm"]["email"].focus();
+     return false;
+
+     }
+     if(d==null || d==""){
+     alert("Contact Number must be filled up!");
+     document.forms["myForm"]["contact"].focus();
+     return false;
+
+     }
+     if(e==null || e==""){
+     alert("Enter the office location!");
+     document.forms["myForm"]["location"].focus();
+     return false;
+
+     }
+     if(f==null || f==""){
+     alert("Enter a password.");
+     document.forms["myForm"]["password"].focus();
+     return false;
+
+     }
+}
+
+</script>
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+
+                <span class="logo-icon">&#9851;</span>
+                <span><font color="black">Eco</font><font color="green">Cycle</font><span class="logo-green"></span></span>
+
+            </div>
+
+        <nav class="navbar">
+            <a href="Landing.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- REGISTRATION SECTION -->
+    <section class="form-section">
+
+        <div class="form-card">
+
+            <!-- FORM HEADING -->
+            <div class="form-heading">
+
+                <div class="form-icon">
+    &#9851;
+</div>
+
+                <h1>Company <span>Registration</span></h1>
+
+                <p>
+                    Register your company with our waste management system.
+                </p>
+
+            </div>
+
+
+            <!-- FORM -->
+            <form name="myForm" method="post" action="companySignup" onsubmit="return validateForm()">
+
+                <!-- COMPANY NAME -->
+                <div class="form-group">
+                    <label>Company Name<font color="red">*</font></label>
+
+                    <input type="text"
+                           name="company"
+                           placeholder="Enter company name"
+                           >
+                </div>
+
+
+                <!-- REGISTRATION NUMBER -->
+                <div class="form-group">
+                    <label>Company ID<font color="red">*</font></label>
+
+                    <input type="text"
+                           name="regno"
+                           placeholder="Enter company id"
+                           >
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label>Email ID<font color="red">*</font></label>
+
+                    <input type="email"
+                           name="email"
+                           placeholder="Enter email address"
+                           >
+                </div>
+
+
+                <!-- CONTACT NUMBER -->
+                <div class="form-group">
+                    <label>Contact Number<font color="red">*</font></label>
+
+                    <input type="tel"
+                           name="contact"
+                           placeholder="Enter contact number"
+                           >
+                </div>
+
+
+                <!-- OFFICE LOCATION -->
+                <div class="form-group">
+                    <label>Office Location<font color="red">*</font></label>
+
+                    <input type="text"
+                           name="location"
+                           placeholder="Enter office location"
+                           >
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label>Password<font color="red">*</font></label>
+
+                    <input type="password"
+                           name="password"
+                           placeholder="Enter password"
+                           >
+                </div>
+
+
+                <!-- BUTTONS -->
+                <div class="form-buttons">
+
+                    <input type="submit"
+                           value="Register"
+                           class="submit-btn">
+
+                    <input type="reset"
+                           value="Reset"
+                           class="reset-btn">
+
+                </div>
+
+
+                
+
+
+                <!-- SIGN IN -->
+                <div class="signin-text">
+
+                    Already a member?
+
+                    <a href="companySignin.html">Sign In</a>
+
+                </div>
+               
+            </form>
+             <div class="back">
+
+                    <a
+                href="page1.html"
+                class="back-link"
+            >
+                &#8592; Back
+            </a>
+
+                </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        © 2026 EcoWaste Management System
+        | Building a Cleaner Future ♻️
+
+    </footer>
+
+</body>
+</html>

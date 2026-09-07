@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoCycle - Sell Product</title>
+
+    <link rel="stylesheet" href="companySell.css">
+
+    <style>
+
+        /* ================= PLATFORM FEE NOTICE ================= */
+
+        .platform-fee-message {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 10px;
+            padding: 12px 14px;
+            background: #f1f8f3;
+            border: 1px solid #cde5d2;
+            border-left: 4px solid #3a8f4b;
+            border-radius: 8px;
+            color: #526458;
+            font-size: 13px;
+            line-height: 1.55;
+            box-sizing: border-box;
+        }
+
+        .platform-fee-message .fee-icon {
+            flex-shrink: 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #3a8f4b;
+            margin-top: 1px;
+        }
+
+        .platform-fee-message strong {
+            color: #2f7d3c;
+            font-weight: 700;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <span class="logo-icon">&#9851;</span>
+
+            <span class="logo-text">
+
+                <span class="eco">Eco</span><span class="cycle">Cycle</span>
+
+            </span>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="navbar">
+
+            <a href="companyHome.html">Home</a>
+
+            <a href="#">About</a>
+
+            <a href="#">Services</a>
+
+            <a href="#">Contact</a>
+
+            <a href="companySignin.html" class="logout">Logout</a>
+
+        </nav>
+
+    </header>
+
+
+
+
+    <!-- ================= MAIN SECTION ================= -->
+
+    <main class="main-container">
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="page-heading">
+
+            <div class="heading-icon">
+
+                &#9851;
+
+            </div>
+
+            <h1>
+
+                Sell Your <span>Product</span>
+
+            </h1>
+
+            <p>
+
+                List your recycled products and make them available
+                to EcoCycle users.
+
+            </p>
+
+        </div>
+
+
+
+
+        <!-- ================= PRODUCT FORM ================= -->
+
+        <div class="product-card">
+
+
+            <div class="card-title">
+
+                <h2>Product Information</h2>
+
+                <p>
+
+                    Enter the details of the product you want to sell.
+
+                </p>
+
+            </div>
+
+
+
+
+            <form action="companySellProducts"
+                  method="post"
+                  enctype="multipart/form-data">
+
+
+
+                <!-- PRODUCT NAME -->
+
+                <div class="form-group">
+
+                    <label for="productName">
+
+                        Product Name
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="productName"
+                        name="productName"
+                        placeholder="Enter product name"
+                        required>
+
+                </div>
+
+
+
+
+                <!-- PRODUCT TYPE AND COLOR -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="productType">
+
+                            Product Type
+
+                        </label>
+
+                        <select
+                            id="productType"
+                            name="productType"
+                            required>
+
+                            <option value="">
+
+                                Select product type
+
+                            </option>
+
+                            <option value="Plastic">
+
+                                Plastic
+
+                            </option>
+
+                            <option value="Paper">
+
+                                Paper
+
+                            </option>
+
+                            <option value="Metal">
+
+                                Metal
+
+                            </option>
+
+                            <option value="Glass">
+
+                                Glass
+
+                            </option>
+
+                            <option value="Electronic">
+
+                                Electronic
+
+                            </option>
+
+                            <option value="Furniture">
+
+                                Furniture
+
+                            </option>
+
+                            <option value="Clothing">
+
+                                Clothing
+
+                            </option>
+
+                            <option value="Other">
+
+                                Other
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+
+                    <div class="form-group">
+
+                        <label for="color">
+
+                            Color
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="color"
+                            name="color"
+                            placeholder="Enter product color"
+                            required>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <!-- QUALITY AND PRICE -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="quality">
+
+                            Product Quality
+
+                        </label>
+
+                        <select
+                            id="quality"
+                            name="quality"
+                            required>
+
+                            <option value="">
+
+                                Select quality
+
+                            </option>
+
+                            <option value="Excellent">
+
+                                Excellent
+
+                            </option>
+
+                            <option value="Good">
+
+                                Good
+
+                            </option>
+
+                            <option value="Average">
+
+                                Average
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+
+                    <div class="form-group">
+
+                        <label for="price">
+
+                            Price (₹)
+
+                        </label>
+
+                        <input
+                            type="number"
+                            id="price"
+                            name="price"
+                            placeholder="Enter price"
+                            min="1"
+                            required>
+
+
+                        <!-- PLATFORM FEE MESSAGE -->
+
+                        <p class="platform-fee-message">
+
+                            <span class="fee-icon">ⓘ</span>
+
+                            <span>
+
+                                A <strong>5% platform fee</strong> will be
+                                deducted from the selling price for each
+                                product purchased by a user. The remaining
+                                amount will be paid to the company after
+                                the transaction is completed.
+
+                            </span>
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <!-- QUANTITY -->
+
+                <div class="form-group">
+
+                    <label for="quantity">
+
+                        Available Quantity
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        name="quantity"
+                        placeholder="Enter available quantity"
+                        min="1"
+                        required>
+
+                </div>
+
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="form-group">
+
+                    <label for="description">
+
+                        Product Description
+
+                    </label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        placeholder="Describe your product, material, condition, usage, etc."
+                        rows="5"
+                        required></textarea>
+
+                </div>
+
+
+
+
+                <!-- PRODUCT IMAGE -->
+
+                <div class="form-group">
+
+                    <label for="productImage">
+
+                        Product Image
+
+                    </label>
+
+                    <div class="image-upload">
+
+                        <div class="upload-icon">
+
+                            &#128247;
+
+                        </div>
+
+                        <div class="upload-content">
+
+                            <p>
+
+                                Upload Product Image
+
+                            </p>
+
+                            <span>
+
+                                JPG, JPEG or PNG
+
+                            </span>
+
+                        </div>
+
+                        <input
+                            type="file"
+                            id="productImage"
+                            name="productImage"
+                            accept="image/jpeg,image/png"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- AGREEMENT -->
+
+                <div class="agreement">
+
+                    <input
+                        type="checkbox"
+                        id="agreement"
+                        required>
+
+                    <label for="agreement">
+
+                        I confirm that the information provided
+                        about this product is correct.
+
+                    </label>
+
+                </div>
+
+
+
+
+                <!-- BUTTON -->
+
+                <div class="form-buttons">
+
+                    <input
+                        type="submit"
+                        value="Add Product"
+                        class="submit-btn">
+
+                </div>
+
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        © 2026 EcoWaste Management System
+
+        <span>|</span>
+
+        Building a Cleaner Future &#9851;
+
+    </footer>
+
+
+
+</body>
+
+</html>

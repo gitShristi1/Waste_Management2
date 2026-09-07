@@ -1,0 +1,191 @@
+<html>
+    
+    
+    <head>
+        
+        <title>Eco Cycle-Company Feedback</title>
+         <link rel="stylesheet" href="companyfeedback.css">
+         
+         
+         <script>
+function validateForm(){
+      var a = document.forms["myForm"]["company"].value;
+      var c = document.forms["myForm"]["email"].value;
+      var d = document.forms["myForm"]["rate"].value;
+      var e = document.forms["myForm"]["quality"].value;
+      var f = document.forms["myForm"]["seller"].value;
+
+if((a==null || a=="")&&(c==null||c=="")&&(d==null||d=="")&&(e==null||e=="")&&(f==null||f==""))
+{
+     alert("All fields are blank");
+     document.forms["myForm"]["company"].focus();
+     //to highlight this field
+     return false;
+
+}
+
+if(a==null || a==""){
+     alert("Company name is missing!");
+     document.forms["myForm"]["company"].focus();
+     return false;
+}
+
+if(c==null || c==""){
+     alert("Email ID must be filled out");
+     document.forms["myForm"]["email"].focus();
+     return false;
+
+     }
+     if(d==null || d==""){
+     alert("Rate your Overall Experience!");
+     document.forms["myForm"]["rate"].focus();
+     return false;
+
+     }
+     if(e==null || e==""){
+     alert("Rate the Quality of work!");
+     document.forms["myForm"]["quality"].focus();
+     return false;
+
+     }
+     if(f==null || f==""){
+     alert("Rate the seller co-operation!");
+     document.forms["myForm"]["seller"].focus();
+     return false;
+
+     }
+}
+</script>
+
+    </head>
+    <body>
+       <header class="header">
+
+        <div class="logo">
+
+                <span class="logo-icon">&#9851;</span>
+                <span><font color="black">Eco</font><font color="green">Cycle</font><span class="logo-green"></span></span>
+
+            </div>
+
+        <nav class="navbar">
+            <a href="Landing.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+        <section class="form-section">
+
+        <div class="form-card">
+
+            <!-- FORM HEADING -->
+            <div class="form-heading">
+
+                <div class="form-icon">
+    &#9851;
+</div>
+
+                <h1>Company <span>Feedback</span></h1>
+
+            </div>
+
+
+            <!-- FORM -->
+            <form name="myForm" method="post" action="companyfeedback" onsubmit="return validateForm()">
+
+                
+                <div class="form-group">
+                    <label>Company Name<font color="red">*</font></label>
+
+                    <input type="text"
+                           name="company"
+                           placeholder="Enter company name"
+                           >
+                </div>
+
+
+                
+                <div class="form-group">
+                    <label>Email ID<font color="red">*</font></label>
+
+                    <input type="email"
+                           name="email"
+                           placeholder="Enter email address"
+                           >
+                </div>
+
+
+                
+                
+
+
+            
+                <div class="form-group">
+                    <label>Rate(1-5):Overall Experience<font color="red">*</font></label>
+
+                    <input type="text"
+                           name="rate"
+                           placeholder="Rate the overall experience"
+                           >
+                </div>
+                
+                <div class="form-group">
+                    <label>Rate(1-5):Quality of Work<font color="red">*</font></label>
+
+                    <input type="text"
+                           name="quality"
+                           placeholder="Rate Quality of Work"
+                           >
+                </div>
+                
+                
+                <div class="form-group">
+                    <label>Rate(1-5):Seller Cooperation<font color="red">*</font></label>
+
+                    <input type="text"
+                           name="seller"
+                           placeholder="Rate Seller Co-operation"
+                           >
+                </div>
+
+
+                
+                <div class="form-buttons">
+
+                    <input type="submit"
+                           value="Submit"
+                           class="submit-btn">
+
+                    <input type="reset"
+                           value="Reset"
+                           class="reset-btn">
+
+                </div>
+
+
+                
+
+
+                
+                
+               
+            </form>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        © 2026 EcoWaste Management System
+        | Building a Cleaner Future ♻️
+
+    </footer>
+
+    </body>
+</html>

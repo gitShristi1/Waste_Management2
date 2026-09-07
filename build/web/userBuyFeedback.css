@@ -1,0 +1,394 @@
+/* ==============================
+   RESET
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   BODY
+   ============================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8f5;
+    color: #222;
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   NAVBAR
+   ============================== */
+
+.navbar {
+    height: 72px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    border-bottom: 1px solid #dfe8e1;
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+
+.logo span {
+    color: green;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: green;
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+   ============================== */
+
+.feedback-container {
+    min-height: calc(100vh - 140px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* ==============================
+   FEEDBACK CARD
+   ============================== */
+
+.feedback-card {
+    width: 100%;
+    max-width: 650px;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+
+/* ==============================
+   ICON
+   ============================== */
+
+.feedback-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    background: #e4f3e8;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+}
+
+
+/* ==============================
+   HEADING
+   ============================== */
+
+.feedback-card h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+
+/* Subtitle */
+
+.subtitle {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+
+/* ==============================
+   FORM
+   ============================== */
+
+form {
+    text-align: left;
+}
+
+
+/* Form group */
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+
+/* Labels */
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 9px;
+
+    color: #333;
+}
+
+
+/* ==============================
+   INPUT
+   ============================== */
+
+input[type="text"],
+textarea {
+    width: 100%;
+
+    border: 1px solid #d6ddd8;
+
+    border-radius: 8px;
+
+    padding: 13px 14px;
+
+    font-size: 14px;
+
+    font-family: Arial, sans-serif;
+
+    outline: none;
+
+    transition: 0.3s;
+
+    background: #fafcfb;
+}
+
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: green;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 128, 0, 0.08);
+}
+
+
+/* Textarea */
+
+textarea {
+    resize: vertical;
+
+    min-height: 130px;
+}
+
+
+/* ==============================
+   STAR RATING
+   ============================== */
+
+.rating {
+    display: flex;
+
+    flex-direction: row-reverse;
+
+    justify-content: flex-end;
+
+    gap: 5px;
+}
+
+
+/* Hide radio buttons */
+
+.rating input {
+    display: none;
+}
+
+
+/* Stars */
+
+.rating label {
+    font-size: 35px;
+
+    color: #d6d6d6;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* Hover */
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #f5b301;
+}
+
+
+/* Selected */
+
+.rating input:checked ~ label {
+    color: #f5b301;
+}
+
+
+/* ==============================
+   SUBMIT BUTTON
+   ============================== */
+
+.submit-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: green;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-top: 5px;
+}
+
+
+.submit-btn:hover {
+    background: #006b00;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==============================
+   BACK LINK
+   ============================== */
+
+.back-link {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    text-decoration: none;
+
+    color: green;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.footer {
+    background: white;
+
+    border-top: 1px solid #e1e8e3;
+
+    text-align: center;
+
+    padding: 22px;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .feedback-container {
+        padding: 30px 15px;
+    }
+
+    .feedback-card {
+        padding: 30px 22px;
+    }
+
+    .feedback-card h1 {
+        font-size: 26px;
+    }
+
+    .rating label {
+        font-size: 30px;
+    }
+
+}

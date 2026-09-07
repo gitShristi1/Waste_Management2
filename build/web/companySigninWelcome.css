@@ -1,0 +1,264 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:#f4f9f5;
+
+    color:#183c2b;
+}
+
+
+/* HEADER */
+
+.header{
+
+    height:75px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 8%;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+
+/* LOGO */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    font-size:28px;
+
+    font-weight:bold;
+}
+
+.logo-icon{
+
+    color:#2f9659;
+
+    font-size:34px;
+
+    margin-right:8px;
+}
+
+.eco{
+
+    color:black;
+}
+
+.cycle{
+
+    color:#2f9659;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+
+    display:flex;
+
+    gap:35px;
+}
+
+.navbar a{
+
+    text-decoration:none;
+
+    color:#444;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.navbar a:hover{
+
+    color:#2f9659;
+}
+
+
+/* HERO */
+
+.hero{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:calc(100vh - 75px);
+
+    padding:40px;
+}
+
+
+/* CARD */
+
+.welcome-card{
+
+    width:600px;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+
+.welcome-card h1{
+
+    font-size:38px;
+
+    margin-bottom:15px;
+}
+
+.welcome-card h2{
+
+    color:#2f9659;
+
+    margin-bottom:20px;
+
+    font-size:30px;
+}
+
+.welcome-card p{
+
+    color:#666;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+}
+
+
+/* BUTTONS */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+}
+
+.btn-primary{
+
+    text-decoration:none;
+
+    background:#2f9659;
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:8px;
+
+    transition:.3s;
+}
+
+.btn-primary:hover{
+
+    background:#237846;
+}
+
+
+.btn-secondary{
+
+    text-decoration:none;
+
+    background:white;
+
+    color:#2f9659;
+
+    border:2px solid #2f9659;
+
+    padding:14px 28px;
+
+    border-radius:8px;
+
+    transition:.3s;
+}
+
+.btn-secondary:hover{
+
+    background:#2f9659;
+
+    color:white;
+}
+
+
+/* FOOTER */
+
+.footer{
+
+    background:#183c2b;
+
+    color:white;
+
+    text-align:center;
+
+    padding:18px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .header{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px;
+    }
+
+    .navbar{
+
+        margin-top:15px;
+
+        gap:18px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .welcome-card{
+
+        width:100%;
+    }
+
+    .buttons{
+
+        flex-direction:column;
+    }
+}

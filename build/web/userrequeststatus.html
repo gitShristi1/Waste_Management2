@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EcoCycle - Request Status</title>
+
+    <link rel="stylesheet" href="userrequeststatus.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Eco<span>Cycle</span>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="HomeUser.html">
+                Home
+            </a>
+
+            <a href="usell.html">
+                Sell Waste
+            </a>
+
+            <a href="buy-products.html">
+                Buy Products
+            </a>
+
+            <a href="requeststatus.html" class="active">
+                My Activities
+            </a>
+
+            <a href="#">
+                About Us
+            </a>
+
+        </nav>
+
+        <button class="profile-btn">
+            Profile
+        </button>
+
+    </header>
+
+
+    <!-- ================= STATUS SECTION ================= -->
+
+    <main class="status">
+
+        <div class="status-card">
+
+            <div class="icon">
+                ♻
+            </div>
+
+            <p class="subtitle">
+                ECOCYCLE
+            </p>
+
+            <h1>
+                Check Your <span>Request Status</span>
+            </h1>
+
+            <p class="description">
+                Enter your Request ID to check the status
+                of your waste request.
+            </p>
+
+
+            <!-- ================= FORM ================= -->
+
+            <form action="userrequeststatus" method="post">
+
+                <label>
+                    Request ID
+                </label>
+
+                <input type="text"
+                       name="request_id"
+                       placeholder="Enter your Request ID"
+                       required>
+
+                <button type="submit">
+                    Check Status
+                </button>
+
+            </form>
+
+
+            <a href="HomeUser.html" class="back">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 EcoCycle. All rights reserved.
+            </p>
+
+            <p>
+                Designed for a cleaner tomorrow.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

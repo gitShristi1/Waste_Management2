@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8f4;
+    color: #222;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 70px;
+
+    background: white;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.logo-icon {
+    color: #238b45;
+
+    font-size: 35px;
+
+    margin-right: 10px;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+
+    gap: 35px;
+}
+
+
+.navbar a {
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+.navbar a:hover {
+    color: #238b45;
+}
+
+
+/* ================= FORM SECTION ================= */
+
+.form-section {
+
+    min-height: calc(100vh - 140px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* FORM CARD */
+
+.form-card {
+
+    width: 500px;
+
+    background: white;
+
+    padding: 45px 55px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================= FORM HEADING ================= */
+
+.form-heading {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.form-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    background: #e5f4e6;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    color: #238b45;
+}
+
+
+.form-heading h1 {
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+
+.form-heading h1 span {
+
+    color: #238b45;
+}
+
+
+.form-heading p {
+
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+/* ================= FORM ================= */
+
+.form-group {
+
+    margin-bottom: 22px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+.form-group input:focus {
+
+    border-color: #238b45;
+
+    box-shadow: 0 0 5px rgba(35, 139, 69, 0.2);
+}
+
+
+.form-group input::placeholder {
+
+    color: #999;
+}
+
+
+/* ================= FORGOT PASSWORD ================= */
+
+.forgot-password {
+
+    text-align: right;
+
+    margin-top: -8px;
+
+    margin-bottom: 25px;
+}
+
+
+.forgot-password a {
+
+    text-decoration: none;
+
+    color: #238b45;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+.forgot-password a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ================= BUTTON ================= */
+
+.form-buttons {
+
+    margin-top: 10px;
+}
+
+
+.submit-btn {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #238b45;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.submit-btn:hover {
+
+    background: #176b34;
+}
+
+
+/* ================= SIGN UP ================= */
+
+.signup-text {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #555;
+
+    font-size: 15px;
+}
+
+
+.signup-text a {
+
+    color: #238b45;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.signup-text a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ================= BACK ================= */
+
+.back {
+
+    text-align: center;
+
+    margin-top: 18px;
+}
+
+
+.back a {
+
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+
+.back a:hover {
+
+    color: #238b45;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #183c2b;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+    .header {
+
+        padding: 0 25px;
+    }
+
+    .navbar {
+
+        display: none;
+    }
+
+    .form-card {
+
+        width: 100%;
+
+        padding: 35px 25px;
+    }
+
+    .form-heading h1 {
+
+        font-size: 28px;
+    }
+}

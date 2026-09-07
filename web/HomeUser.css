@@ -1,0 +1,700 @@
+/* =========================================
+   ECOCYCLE - USER HOME PAGE
+   Complete CSS
+========================================= */
+
+
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 7%;
+
+    background-color: #EAF7EC;
+
+    border-bottom: 1px solid #D5EFD8;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 26px;
+
+    font-weight: 700;
+
+    color: #333333;
+
+    letter-spacing: -0.5px;
+
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #62B96B;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-left: auto;
+}
+
+.nav-links a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #49604C;
+
+    font-size: 14px;
+
+    padding: 27px 0;
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #4EAA58;
+}
+
+
+/* Active Navigation Link */
+
+.nav-links a.active {
+    color: #4EAA58;
+
+    font-weight: 600;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 18px;
+
+    width: 100%;
+
+    height: 2px;
+
+    background-color: #72C77A;
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+
+.logout-btn {
+    padding: 9px 18px;
+
+    background: #2f9659;
+
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #237846;
+
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   MAIN HOME SECTION
+========================================= */
+
+.home {
+    min-height: 600px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 100px 20px 110px;
+
+    background-color: #ffffff;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   SUBTLE BACKGROUND DECORATION
+========================================= */
+
+.home::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 280px;
+
+    border-radius: 50%;
+
+    background-color: #F1FAF2;
+
+    top: 50px;
+
+    left: -140px;
+
+    z-index: 0;
+}
+
+.home::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    background-color: #F3FAF4;
+
+    bottom: 30px;
+
+    right: -100px;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome {
+    position: relative;
+
+    z-index: 1;
+
+    text-align: center;
+
+    max-width: 720px;
+}
+
+
+/* Small Heading */
+
+.subtitle {
+    color: #72C77A;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.8px;
+
+    margin-bottom: 16px;
+}
+
+
+/* Main Heading */
+
+.welcome h1 {
+    font-size: 46px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    color: #333333;
+
+    margin-bottom: 20px;
+}
+
+.welcome h1 span {
+    color: #72C77A;
+}
+
+
+/* Description */
+
+.description {
+    color: #777777;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    max-width: 620px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   ACTION SECTION
+========================================= */
+
+.action-section {
+    position: relative;
+
+    z-index: 1;
+
+    margin-top: 65px;
+
+    text-align: center;
+}
+
+.action-section h2 {
+    font-size: 21px;
+
+    font-weight: 500;
+
+    color: #444444;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.actions {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.action-btn {
+    min-width: 225px;
+
+    padding: 15px 23px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #72C77A;
+
+    border-radius: 6px;
+
+    color: #5DAF65;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Action Button Hover */
+
+.action-btn:hover {
+    background-color: #72C77A;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(114, 199, 122, 0.20);
+}
+
+
+/* Arrow */
+
+.action-btn b {
+    font-size: 17px;
+
+    font-weight: normal;
+
+    transition: transform 0.2s ease;
+}
+
+.action-btn:hover b {
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background-color: #2F7D46;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   MAIN FOOTER AREA
+========================================= */
+
+.footer-main {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 45px 7% 40px;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+
+    gap: 45px;
+}
+
+
+/* =========================================
+   FOOTER BRAND
+========================================= */
+
+.footer-brand h2 {
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+    color: #ffffff;
+}
+
+.footer-brand h2 span {
+    color: #BFE8C5;
+}
+
+.footer-brand p {
+    color: #DCEFE0;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FOOTER LINKS
+========================================= */
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.footer-links h3 {
+    font-size: 15px;
+
+    margin-bottom: 7px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+.footer-links a {
+    color: #DCEFE0;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+
+    padding-left: 3px;
+}
+
+
+/* =========================================
+   FOOTER CONTACT
+========================================= */
+
+.footer-contact h3 {
+    font-size: 15px;
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+.footer-contact p {
+    color: #DCEFE0;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   DARKER FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+    background-color: #245F36;
+
+    min-height: 52px;
+
+    padding: 15px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom p {
+    color: #CFE7D3;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .profile-btn {
+        margin-left: 18px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .footer-bottom {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 18px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        margin-left: 0;
+    }
+
+    .nav-links a {
+        padding: 5px 0;
+    }
+
+    .nav-links a.active::after {
+        bottom: -3px;
+    }
+
+    .profile-btn {
+        margin-left: auto;
+    }
+
+
+    /* Main */
+
+    .home {
+        padding-top: 75px;
+
+        padding-bottom: 90px;
+    }
+
+    .welcome h1 {
+        font-size: 36px;
+    }
+
+    .description {
+        max-width: 550px;
+    }
+
+
+    /* Buttons */
+
+    .actions {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .action-btn {
+        width: 270px;
+    }
+
+
+    /* Footer */
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 6px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .welcome h1 {
+        font-size: 31px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+
+        letter-spacing: 1.4px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .action-section h2 {
+        font-size: 19px;
+    }
+
+    .action-btn {
+        width: 250px;
+
+        font-size: 14px;
+    }
+
+    .footer-main {
+        padding-top: 35px;
+
+        padding-bottom: 30px;
+    }
+}
