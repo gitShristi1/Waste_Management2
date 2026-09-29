@@ -19,6 +19,9 @@ public class companyfeedback extends HttpServlet {
         String rate = req.getParameter("rate");
         String quality = req.getParameter("quality");
         String seller = req.getParameter("seller");
+        HttpSession session = req.getSession();
+
+String userEmail = (String) session.getAttribute("userEmail");
 
         Connection con = null;
         PreparedStatement pw = null;
@@ -77,11 +80,10 @@ public class companyfeedback extends HttpServlet {
                INSERT FEEDBACK
             ========================================= */
 
-            String sql =
-                "INSERT INTO companyfeedback " +
-                "(feedback_id, name, email, rate, quality, seller) " +
-                "VALUES (?, ?, ?, ?, ?, ?)";
-
+           String sql =
+    "INSERT INTO companyfeedback " +
+    "(feedback_id, name, email, rate, quality, seller, email_id) " +
+    "VALUES (?, ?, ?, ?, ?, ?, ?)";
             pw = con.prepareStatement(sql);
 
             pw.setString(1, feedbackId);
@@ -90,6 +92,7 @@ public class companyfeedback extends HttpServlet {
             pw.setString(4, rate);
             pw.setString(5, quality);
             pw.setString(6, seller);
+            pw.setString(7, userEmail);
 
             int result = pw.executeUpdate();
 

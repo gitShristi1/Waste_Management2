@@ -72,11 +72,11 @@ public class companySellProducts extends HttpServlet {
             return;
         }
 
-        String companyRegno =
-                (String) session.getAttribute("companyRegno");
+        String companyid =
+                (String) session.getAttribute("companyId");
 
         System.out.println(
-                "COMPANY REGNO = " + companyRegno
+                "COMPANY Id = " + companyid
         );
 
 
@@ -84,8 +84,8 @@ public class companySellProducts extends HttpServlet {
         // CHECK COMPANY SESSION
         // ==========================================
 
-        if (companyRegno == null ||
-                companyRegno.trim().isEmpty()) {
+        if (companyid == null ||
+                companyid.trim().isEmpty()) {
 
             out.println("<html>");
             out.println("<head>");
@@ -137,7 +137,7 @@ public class companySellProducts extends HttpServlet {
         String uploadPath =
                 getServletContext().getRealPath("")
                 + File.separator
-                + "productImages";
+                + "uploads";
 
         File uploadDirectory =
                 new File(uploadPath);
@@ -191,7 +191,7 @@ public class companySellProducts extends HttpServlet {
                     "INSERT INTO product_information "
                     + "(product_name, product_type, color, "
                     + "quality, price, quantity, description, "
-                    + "product_image, COMPANY_REGNO) "
+                    + "product_image, company_id) "
                     + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 
@@ -246,7 +246,7 @@ public class companySellProducts extends HttpServlet {
             // Logged-in company's registration number
             statement.setString(
                     9,
-                    companyRegno
+                    companyid
             );
 
 
@@ -265,7 +265,7 @@ public class companySellProducts extends HttpServlet {
             if (result > 0) {
 
                 response.sendRedirect(
-                        "companyProducts"
+                        "companyproducts"
                 );
             }
 

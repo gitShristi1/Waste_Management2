@@ -73,8 +73,9 @@ public class acceptwaste extends HttpServlet {
                 cost = rs.getString("cost");
                 commission = rs.getString("commission");
                 companyCost = rs.getString("company_cost");
-
-
+                
+                
+                session.setAttribute("userEmail", email);
                 /*
                  * =========================================
                  * GENERATE UNIQUE TRANSACTION ID

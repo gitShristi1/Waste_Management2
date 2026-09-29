@@ -48,15 +48,15 @@ public class companySellingStatus extends HttpServlet {
         // GET COMPANY REGISTRATION NUMBER
         // ==========================================
 
-        String companyRegno =
-                (String) session.getAttribute("companyRegno");
+        String companyid =
+                (String) session.getAttribute("companyId");
 
         // ==========================================
         // CHECK COMPANY LOGIN
         // ==========================================
 
-        if (companyRegno == null ||
-                companyRegno.trim().isEmpty()) {
+        if (companyid == null ||
+                companyid.trim().isEmpty()) {
 
             response.sendRedirect("companySignin.html");
 
@@ -96,16 +96,16 @@ public class companySellingStatus extends HttpServlet {
             String companyName = "";
 
             String companySQL =
-                    "SELECT company " +
-                    "FROM companysignin " +
-                    "WHERE regno = ?";
+                    "SELECT COMPANY_NAME " +
+                    "FROM company " +
+                    "WHERE COMPANY_ID = ?";
 
             companyStatement =
                     connection.prepareStatement(companySQL);
 
             companyStatement.setString(
                     1,
-                    companyRegno
+                    companyid
             );
 
             companyResult =
@@ -114,7 +114,7 @@ public class companySellingStatus extends HttpServlet {
             if (companyResult.next()) {
 
                 companyName =
-                        companyResult.getString("company");
+                        companyResult.getString("COMPANY_NAME");
             }
 
             companyResult.close();
@@ -148,8 +148,8 @@ public class companySellingStatus extends HttpServlet {
                     "FROM product_information p " +
                     "LEFT JOIN transactions t " +
                     "ON p.product_id = t.product_id " +
-                    "AND t.COMPANY_REGNO = p.COMPANY_REGNO " +
-                    "WHERE p.COMPANY_REGNO = ? " +
+                    "AND t.COMPANY_ID = p.COMPANY_ID " +
+                    "WHERE p.COMPANY_ID = ? " +
                     "GROUP BY " +
                     "p.product_id, " +
                     "p.product_name, " +
@@ -166,7 +166,7 @@ public class companySellingStatus extends HttpServlet {
 
             statement.setString(
                     1,
-                    companyRegno
+                    companyid
             );
 
             rs =
@@ -682,8 +682,8 @@ public class companySellingStatus extends HttpServlet {
             out.println(
                     "<p>" +
                     companyName +
-                    " | Registration No: " +
-                    companyRegno +
+                    " | Company ID: " +
+                    companyid +
                     "</p>"
             );
 
@@ -778,14 +778,16 @@ public class companySellingStatus extends HttpServlet {
                 // ==========================================
 
                 out.println(
-                        "<img class='product-image' " +
-                        "src='productImages/" +
-                        image +
-                        "' " +
-                        "alt='" +
-                        productName +
-                        "'>"
-                );
+        "<img class='product-image' " +
+        "src='" +
+        request.getContextPath() +
+        "/uploads/" +
+        image +
+        "' " +
+        "alt='" +
+        productName +
+        "'>"
+);
 
                 // ==========================================
                 // PRODUCT BODY
@@ -941,12 +943,48 @@ public class companySellingStatus extends HttpServlet {
                             "</span>"
                     );
                 }
+                
+                
+                
+                // ==========================================
+                // VIEW CUSTOMER FEEDBACK FOR THIS PRODUCT
+                // ==========================================
+
+                out.println(
+                        "<div style='margin-top:20px; text-align:center;'>" +
+                        "<a class='feedback-btn' " +
+                        "href='companyCustomerFeedback?product_id=" +
+                        productId +
+                        "'>" +
+                        "View Customer Feedback" +
+                        "</a>" +
+                        "</div>"
+                );
 
                 out.println("</div>");
                 out.println("</div>");
             }
 
             out.println("</div>");
+
+            // ==========================================
+            // VIEW ALL CUSTOMER FEEDBACK
+            // ==========================================
+
+            out.println(
+                    "<div style='text-align:center; margin-top:30px;'>" +
+                    "<a class='feedback-btn' " +
+                    "href='companyCustomerFeedback'>" +
+                    "View All Customer Feedback" +
+                    "</a>" +
+                    "</div>"
+            );
+                
+                
+
+              
+            
+            
 
             // ==========================================
             // SUMMARY
@@ -1069,7 +1107,7 @@ public class companySellingStatus extends HttpServlet {
 
             out.println(
                     "<a class='back-btn' " +
-                    "href='companyHome.html'>" +
+                    "href='companyhome.html'>" +
                     "← Back to Company Home" +
                     "</a>"
             );

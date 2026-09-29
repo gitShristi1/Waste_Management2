@@ -668,15 +668,17 @@ public class userProducts extends HttpServlet {
                 // =====================================
 
                 out.println(
-                    "<img "
-                    + "src='productImages/"
-                    + imageName
-                    + "' "
-                    + "class='product-image' "
-                    + "alt='"
-                    + productName
-                    + "'>"
-                );
+    "<img "
+    + "src='"
+    + request.getContextPath()
+    + "/uploads/"
+    + imageName
+    + "' "
+    + "class='product-image' "
+    + "alt='"
+    + productName
+    + "'>"
+);
 
 
                 // =====================================
@@ -773,7 +775,7 @@ public class userProducts extends HttpServlet {
                 if (quantity > 0) {
 
                     out.println(
-                        "<form action='buyProduct' "
+                        "<form action='buyProducts' "
                         + "method='post'>"
                     );
 

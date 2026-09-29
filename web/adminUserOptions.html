@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>User Management | EcoCycle</title>
+
+    <link rel="stylesheet" href="adminUserOptions.css">
+
+
+    <script>
+
+        function postRequest(url) {
+
+            var form = document.createElement("form");
+
+            form.method = "POST";
+
+            form.action = url;
+
+            document.body.appendChild(form);
+
+            form.submit();
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= MAIN CONTAINER ================= -->
+
+<div class="container">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <h3>Admin Panel</h3>
+
+
+        <!-- Dashboard -->
+
+        <a href="#"
+           onclick="postRequest('adminDashboard'); return false;">
+
+            <span>▣</span>
+
+            Dashboard
+
+        </a>
+
+
+        <!-- Users -->
+
+        <a href="#"
+           class="active"
+           onclick="postRequest('adminUserOptions.html'); return false;">
+
+            <span>👤</span>
+
+            Users
+
+        </a>
+
+
+        <!-- Companies -->
+
+        <a href="#"
+           onclick="postRequest('adminCompanyOptions.html'); return false;">
+
+            <span>🏢</span>
+
+            Companies
+
+        </a>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <div class="welcome">
+
+            <div>
+
+                <h1>User Management</h1>
+
+                <p>
+                    Select an option to manage and monitor
+                    user activities on EcoCycle.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= USER OPTIONS ================= -->
+
+        <div class="options">
+
+
+            <!-- ================= ACTIVE USERS ================= -->
+
+            <a href="#"
+               class="option-card"
+               onclick="postRequest('activeuser'); return false;">
+
+                <div class="option-icon">
+
+                    👤
+
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Active Users
+                    </h2>
+
+                    <p>
+                        View the active users.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+
+            <!-- ================= SELLING PRODUCTS ================= -->
+
+            <a href="#"
+               class="option-card"
+               onclick="postRequest('ViewWasteServlet'); return false;">
+
+                <div class="option-icon">
+
+                    ♻
+
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Selling Products
+                    </h2>
+
+                    <p>
+                        View products listed for sale by users.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- ================= PRODUCTS BOUGHT ================= -->
+
+            <a href="#"
+               class="option-card"
+               onclick="postRequest('AdminUserProductsBoughtServlet'); return false;">
+
+                <div class="option-icon">
+
+                    🛒
+
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Products Bought
+                    </h2>
+
+                    <p>
+                        View products purchased by users.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- ================= FEEDBACK ================= -->
+
+            <a href="#"
+               class="option-card"
+               onclick="postRequest('AdminUserFeedbackServlet'); return false;">
+
+                <div class="option-icon">
+
+                    💬
+
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Feedback
+                    </h2>
+
+                    <p>
+                        View feedback submitted by users.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 EcoCycle Management System |
+    Building a Cleaner Future ♻
+
+</footer>
+
+
+</body>
+
+</html>

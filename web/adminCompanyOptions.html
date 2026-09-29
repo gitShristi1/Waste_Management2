@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Company Management | EcoCycle</title>
+
+    <link rel="stylesheet" href="adminCompanyOptions.css">
+
+    <script>
+
+        function postRequest(url) {
+
+            var form = document.createElement("form");
+
+            form.method = "POST";
+
+            form.action = url;
+
+            document.body.appendChild(form);
+
+            form.submit();
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<!-- ================= MAIN CONTAINER ================= -->
+
+<div class="container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <h3>Admin Panel</h3>
+
+        <!-- Dashboard -->
+
+        <a href="#"
+           onclick="postRequest('adminDashboard.html'); return false;">
+
+            <span>▣</span>
+
+            Dashboard
+
+        </a>
+
+        <!-- Users -->
+
+        <a href="#"
+           onclick="postRequest('adminUserOptions.html'); return false;">
+
+            <span>👤</span>
+
+            Users
+
+        </a>
+
+        <!-- Companies -->
+
+        <a href="#"
+           class="active"
+           onclick="postRequest('adminCompanyOptions.html'); return false;">
+
+            <span>🏢</span>
+
+            Companies
+
+        </a>
+
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <div class="welcome">
+
+            <div>
+
+                <h1>Company Management</h1>
+
+                <p>
+
+                    Select an option to manage and monitor
+                    recycling companies on EcoCycle.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ================= COMPANY OPTIONS ================= -->
+
+        <div class="options">
+
+            <!-- Active Companies -->
+
+            <a href="#"
+               class="option-card"
+               onclick="postRequest('activeCompany'); return false;">
+
+                <div class="option-icon">
+
+                    🏢
+
+                </div>
+
+                <div>
+
+                    <h2>Active Companies</h2>
+
+                    <p>
+
+                        View all registered recycling companies.
+
+                    </p>
+
+                </div>
+
+            </a>
+
+            <!-- Waste Requests -->
+
+            <a href="#"
+               class="option-card"
+               onclick="postRequest('companyWasteRequests'); return false;">
+
+                <div class="option-icon">
+
+                    ♻
+
+                </div>
+
+                <div>
+
+                    <h2>Waste Requests</h2>
+
+                    <p>
+
+                        View waste requests accepted by companies.
+
+                    </p>
+
+                </div>
+
+            </a>
+
+            <!-- Products -->
+
+            <a href="#"
+               class="option-card"
+               onclick="postRequest('companyProducts'); return false;">
+
+                <div class="option-icon">
+
+                    📦
+
+                </div>
+
+                <div>
+
+                    <h2>Products</h2>
+
+                    <p>
+
+                        View recycled products listed by companies.
+
+                    </p>
+
+                </div>
+
+            </a>
+
+            <!-- Payments -->
+
+            <a href="#"
+               class="option-card"
+               onclick="postRequest('companyPayments'); return false;">
+
+                <div class="option-icon">
+
+                    💰
+
+                </div>
+
+                <div>
+
+                    <h2>Payments</h2>
+
+                    <p>
+
+                        View company payment records.
+
+                    </p>
+
+                </div>
+
+            </a>
+
+            <!-- Feedback -->
+
+            <a href="#"
+               class="option-card"
+               onclick="postRequest('companyFeedback'); return false;">
+
+                <div class="option-icon">
+
+                    💬
+
+                </div>
+
+                <div>
+
+                    <h2>Feedback</h2>
+
+                    <p>
+
+                        View feedback submitted by companies.
+
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 EcoCycle Management System |
+    Building a Cleaner Future ♻
+
+</footer>
+
+</body>
+
+</html>

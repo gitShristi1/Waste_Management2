@@ -15,6 +15,15 @@ import java.sql.ResultSet;
 public class removeProduct extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
+    @Override
+protected void doGet(
+        HttpServletRequest request,
+        HttpServletResponse response)
+        throws ServletException, IOException {
+
+    doPost(request, response);
+}
+@Override
 
     protected void doPost(
             HttpServletRequest request,
@@ -45,13 +54,13 @@ public class removeProduct extends HttpServlet {
         // GET COMPANY REGISTRATION NUMBER
         // ==========================================
 
-        String companyRegno =
+        String companyid =
                 (String) session.getAttribute(
-                        "companyRegno"
+                        "companyId"
                 );
 
-        if (companyRegno == null ||
-                companyRegno.trim().isEmpty()) {
+        if (companyid == null ||
+                companyid.trim().isEmpty()) {
 
             response.sendRedirect(
                     "companySignin.html"
@@ -71,7 +80,7 @@ public class removeProduct extends HttpServlet {
                 productIdString.trim().isEmpty()) {
 
             response.sendRedirect(
-                    "companyProducts"
+                    "companyproducts"
             );
 
             return;
@@ -87,7 +96,7 @@ public class removeProduct extends HttpServlet {
         } catch (NumberFormatException e) {
 
             response.sendRedirect(
-                    "companyProducts"
+                    "companyproducts"
             );
 
             return;
@@ -123,7 +132,7 @@ public class removeProduct extends HttpServlet {
                     "SELECT product_id " +
                     "FROM product_information " +
                     "WHERE product_id = ? " +
-                    "AND COMPANY_REGNO = ?";
+                    "AND COMPANY_ID = ?";
 
             checkStatement =
                     connection.prepareStatement(
@@ -137,7 +146,7 @@ public class removeProduct extends HttpServlet {
 
             checkStatement.setString(
                     2,
-                    companyRegno
+                    companyid
             );
 
             rs =
@@ -150,7 +159,7 @@ public class removeProduct extends HttpServlet {
             if (!rs.next()) {
 
                 response.sendRedirect(
-                        "companyProducts"
+                        "companyproducts"
                 );
 
                 return;
@@ -169,7 +178,7 @@ public class removeProduct extends HttpServlet {
             String deleteSql =
                     "DELETE FROM product_information " +
                     "WHERE product_id = ? " +
-                    "AND COMPANY_REGNO = ?";
+                    "AND COMPANY_ID = ?";
 
             deleteStatement =
                     connection.prepareStatement(
@@ -183,7 +192,7 @@ public class removeProduct extends HttpServlet {
 
             deleteStatement.setString(
                     2,
-                    companyRegno
+                    companyid
             );
 
             int rowsDeleted =
@@ -204,7 +213,7 @@ public class removeProduct extends HttpServlet {
                 );
 
                 System.out.println(
-                        "Company Regno = " + companyRegno
+                        "Company ID = " + companyid
                 );
 
             } else {
@@ -219,7 +228,7 @@ public class removeProduct extends HttpServlet {
             // ==========================================
 
             response.sendRedirect(
-                    "companyProducts"
+                    "companyproducts"
             );
 
         } catch (Exception e) {
@@ -237,7 +246,7 @@ public class removeProduct extends HttpServlet {
                     "<p>" +
                     e.getMessage() +
                     "</p>" +
-                    "<a href='companyProducts'>" +
+                    "<a href='companyproducts'>" +
                     "Back to My Products" +
                     "</a>" +
                     "</body>" +

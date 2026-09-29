@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+
+/* ============================= */
+/* BODY                          */
+/* ============================= */
+
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
@@ -13,7 +18,60 @@ body {
     align-items: center;
 
     background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+
+    position: relative;
 }
+
+
+/* ============================= */
+/* ADMIN LOGIN                   */
+/* ============================= */
+
+.admin-login {
+    position: fixed !important;
+
+    top: 20px !important;
+    right: 25px !important;
+
+    display: block !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    padding: 10px 18px !important;
+
+    background: #2e7d32 !important;
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    font-family: Arial, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+
+    border: none !important;
+    border-radius: 6px !important;
+
+    z-index: 99999 !important;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.3s ease;
+}
+
+.admin-login:hover {
+    background: #1b5e20 !important;
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ============================= */
+/* MAIN CONTAINER                */
+/* ============================= */
 
 .container {
     width: 90%;
@@ -21,7 +79,10 @@ body {
     text-align: center;
 }
 
-/* Heading */
+
+/* ============================= */
+/* HEADING                       */
+/* ============================= */
 
 .heading h1 {
     font-size: 42px;
@@ -36,7 +97,9 @@ body {
 }
 
 
-/* Cards */
+/* ============================= */
+/* CARDS                         */
+/* ============================= */
 
 .options {
     display: flex;
@@ -46,6 +109,7 @@ body {
 
 .account-card {
     width: 400px;
+
     background: white;
 
     padding: 40px 35px;
@@ -59,11 +123,14 @@ body {
 
 .account-card:hover {
     transform: translateY(-8px);
+
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 }
 
 
-/* Icon */
+/* ============================= */
+/* ICON                          */
+/* ============================= */
 
 .icon {
     font-size: 55px;
@@ -71,7 +138,9 @@ body {
 }
 
 
-/* Card heading */
+/* ============================= */
+/* CARD HEADING                  */
+/* ============================= */
 
 .account-card h2 {
     font-size: 28px;
@@ -80,7 +149,9 @@ body {
 }
 
 
-/* Description */
+/* ============================= */
+/* DESCRIPTION                   */
+/* ============================= */
 
 .account-card p {
     color: #666;
@@ -89,7 +160,9 @@ body {
 }
 
 
-/* Buttons */
+/* ============================= */
+/* BUTTONS                       */
+/* ============================= */
 
 .buttons {
     display: flex;
@@ -110,7 +183,9 @@ body {
 }
 
 
-/* Sign In */
+/* ============================= */
+/* SIGN IN                       */
+/* ============================= */
 
 .signin-btn {
     background: #2e7d32;
@@ -122,7 +197,9 @@ body {
 }
 
 
-/* Sign Up */
+/* ============================= */
+/* SIGN UP                       */
+/* ============================= */
 
 .signup-btn {
     border: 2px solid #2e7d32;
@@ -135,7 +212,9 @@ body {
 }
 
 
-/* Back button */
+/* ============================= */
+/* BACK BUTTON                   */
+/* ============================= */
 
 .back {
     display: inline-block;
@@ -154,7 +233,9 @@ body {
 }
 
 
-/* Responsive */
+/* ============================= */
+/* RESPONSIVE                    */
+/* ============================= */
 
 @media (max-width: 800px) {
 
@@ -170,4 +251,18 @@ body {
     .heading h1 {
         font-size: 32px;
     }
+}
+
+
+@media (max-width: 500px) {
+
+    .admin-login {
+        top: 15px !important;
+        right: 15px !important;
+
+        padding: 8px 13px !important;
+
+        font-size: 13px !important;
+    }
+
 }

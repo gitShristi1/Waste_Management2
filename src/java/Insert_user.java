@@ -2,6 +2,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -20,6 +21,11 @@ public class Insert_user extends HttpServlet {
 		 String password = req.getParameter("password");
 		 String address = req.getParameter("address");
 		 String contact = req.getParameter("contact");
+                 HttpSession session = req.getSession();
+
+                // Store user's email in session
+                session.setAttribute("email", email);
+
 		// pw1.println("<html><body bgcolor=yellow> <h1>Welcome<h1> <br> E MAIL ID - "+mail+"<br> PASSWORD IS - "+pass+
 		//		"<br> NAME - "+name+"<br> ADDRESS - "+add+"<br> GENDER - "+gen+ "<br>SEQURITYQUEATION - "+sq+ "<br> ANS - "
 		//		+ans+" <br> CONTACT INFO - "+cno+"</body></html>");

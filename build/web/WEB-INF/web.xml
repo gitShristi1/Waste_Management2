@@ -61,10 +61,6 @@
         <servlet-class>companyfeedback</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>companysell</servlet-name>
-        <servlet-class>companysell</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>userrequeststatus</servlet-name>
         <servlet-class>userrequeststatus</servlet-class>
     </servlet>
@@ -115,6 +111,62 @@
     <servlet>
         <servlet-name>userProducts</servlet-name>
         <servlet-class>userProducts</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Forgot_Pass</servlet-name>
+        <servlet-class>Forgot_Pass</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>fp5</servlet-name>
+        <servlet-class>fp5</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>fp6</servlet-name>
+        <servlet-class>fp6</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>buyProducts</servlet-name>
+        <servlet-class>buyProducts</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>requeststatus</servlet-name>
+        <servlet-class>requeststatus</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>AdminLoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>activeuser</servlet-name>
+        <servlet-class>activeuser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewWasteServlet</servlet-name>
+        <servlet-class>servlet.ViewWasteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewPaymentsServlet</servlet-name>
+        <servlet-class>servlet.ViewPaymentsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminUserProductsBoughtServlet</servlet-name>
+        <servlet-class>servlet.AdminUserProductsBoughtServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>userBuyFeedback</servlet-name>
+        <servlet-class>userBuyFeedback</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminUserFeedbackServlet</servlet-name>
+        <servlet-class>servlet.AdminUserFeedbackServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>companyCustomerFeedback</servlet-name>
+        <servlet-class>companyCustomerFeedback</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>userCustomerFeedback</servlet-name>
+        <servlet-class>userCustomerFeedback</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>demo</servlet-name>
@@ -177,10 +229,6 @@
         <url-pattern>/companyfeedback</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>companysell</servlet-name>
-        <url-pattern>/companysell</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>userrequeststatus</servlet-name>
         <url-pattern>/userrequeststatus</url-pattern>
     </servlet-mapping>
@@ -231,6 +279,62 @@
     <servlet-mapping>
         <servlet-name>userProducts</servlet-name>
         <url-pattern>/userProducts</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Forgot_Pass</servlet-name>
+        <url-pattern>/Forgot_Pass</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>fp5</servlet-name>
+        <url-pattern>/fp5</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>fp6</servlet-name>
+        <url-pattern>/fp6</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>buyProducts</servlet-name>
+        <url-pattern>/buyProducts</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>requeststatus</servlet-name>
+        <url-pattern>/requeststatus</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/AdminLoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>activeuser</servlet-name>
+        <url-pattern>/activeuser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewWasteServlet</servlet-name>
+        <url-pattern>/ViewWasteServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewPaymentsServlet</servlet-name>
+        <url-pattern>/ViewPaymentsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminUserProductsBoughtServlet</servlet-name>
+        <url-pattern>/AdminUserProductsBoughtServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userBuyFeedback</servlet-name>
+        <url-pattern>/userBuyFeedback</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminUserFeedbackServlet</servlet-name>
+        <url-pattern>/AdminUserFeedbackServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>companyCustomerFeedback</servlet-name>
+        <url-pattern>/companyCustomerFeedback</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userCustomerFeedback</servlet-name>
+        <url-pattern>/userCustomerFeedback</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>Landing.html</welcome-file>
