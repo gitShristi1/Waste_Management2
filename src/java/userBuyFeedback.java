@@ -177,8 +177,8 @@ if (productId == null || transactionId == null) {
 
             String sql =
     "INSERT INTO USER_BUY_FEEDBACK " +
-    "(FEEDBACK_ID, NAME, RATING, FEEDBACK, PRODUCT_ID, TRANSACTION_ID) " +
-    "VALUES (USER_BUY_FEEDBACK_SEQ.NEXTVAL, ?, ?, ?, ?, ?)";
+    "(FEEDBACK_ID, NAME, RATING, FEEDBACK, PRODUCT_ID, TRANSACTION_ID,FEEDBACK_DATE) " +
+    "VALUES (USER_BUY_FEEDBACK_SEQ.NEXTVAL, ?, ?, ?, ?, ?,SYSTIMESTAMP)";
             insertPS = con.prepareStatement(sql);
 
 insertPS.setString(1, name);

@@ -521,14 +521,14 @@ public class companyCustomerFeedback extends HttpServlet {
 
                 found = true;
 
-                int feedbackId =
-                        rs.getInt("FEEDBACK_ID");
+                String feedbackId =
+                        rs.getString("FEEDBACK_ID");
 
                 int resultProductId =
                         rs.getInt("PRODUCT_ID");
 
-                int transactionId =
-                        rs.getInt("TRANSACTION_ID");
+                String transactionId =
+                        rs.getString("TRANSACTION_ID");
 
                 String customerName =
                         rs.getString("NAME");

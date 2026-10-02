@@ -4,6 +4,12 @@ import jakarta.servlet.http.*;
 import java.sql.*;
 
 public class requestfetch extends HttpServlet {
+    @Override
+protected void doGet(HttpServletRequest req, HttpServletResponse res)
+        throws ServletException, IOException {
+
+    doPost(req, res);
+}
 
     public void doPost(HttpServletRequest req, HttpServletResponse res)
             throws IOException, ServletException {
@@ -199,7 +205,28 @@ public class requestfetch extends HttpServlet {
 
             pwl.println("<div class='accept-box'>");
 
-            pwl.println("<form method='post' action='acceptwaste'>");
+            HttpSession session = req.getSession(false);
+
+String companyName = "";
+String companyId = "";
+
+if (session != null) {
+    if (session.getAttribute("companyName") != null) {
+        companyName = (String) session.getAttribute("companyName");
+    }
+
+    if (session.getAttribute("companyId") != null) {
+        companyId = (String) session.getAttribute("companyId");
+    }
+}
+
+pwl.println("<form method='post' action='acceptwaste'>");
+
+pwl.println("<input type='hidden' name='companyName' value='" 
+        + companyName + "'>");
+
+pwl.println("<input type='hidden' name='companyId' value='" 
+        + companyId + "'>");
 
             pwl.println(
                 "<label>Enter the request id of the waste that you want to accept</label>"

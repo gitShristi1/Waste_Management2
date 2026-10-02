@@ -8,14 +8,12 @@
 
 function validateForm(){
       var a = document.forms["myForm"]["company"].value;
-      var b = document.forms["myForm"]["regno"].value;
-
       var c = document.forms["myForm"]["email"].value;
       var d = document.forms["myForm"]["contact"].value;
       var e = document.forms["myForm"]["location"].value;
       var f = document.forms["myForm"]["password"].value;
 
-if((a==null || a=="")&&(b==null||b=="")&&(c==null||c=="")&&(d==null||d=="")&&(e==null||e=="")&&(f==null||f==""))
+if((a==null || a=="")&&(c==null||c=="")&&(d==null||d=="")&&(e==null||e=="")&&(f==null||f==""))
 {
      alert("All fields are blank");
      document.forms["myForm"]["company"].focus();
@@ -28,13 +26,6 @@ if(a==null || a==""){
      alert("Company name is missing!");
      document.forms["myForm"]["company"].focus();//to highlight this field
      return false;
-}
-
-if(b==null || b==""){
-     alert("Company ID is missing!");
-     document.forms["myForm"]["regno"].focus();
-     return false;
-
 }
 
 if(c==null || c==""){
@@ -120,17 +111,6 @@ if(c==null || c==""){
                     <input type="text"
                            name="company"
                            placeholder="Enter company name"
-                           >
-                </div>
-
-
-                <!-- REGISTRATION NUMBER -->
-                <div class="form-group">
-                    <label>Company ID<font color="red">*</font></label>
-
-                    <input type="text"
-                           name="regno"
-                           placeholder="Enter company id"
                            >
                 </div>
 

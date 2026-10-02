@@ -1,17 +1,256 @@
-<html>
-    <head>
-        <title>EcoCycle - Requests</title>
-        <link rel="stylesheet" href="c_request.css">
-    </head>
-    <body>
-        <header class="header">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EcoCycle - Waste Requests</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f9f4;
+            color: #183c2b;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+
+        .header {
+            height: 78px;
+            padding: 0 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: white;
+
+            border-bottom: 1px solid #e4eee5;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .logo-icon {
+            color: #3c9b63;
+            font-size: 30px;
+        }
+
+        .eco {
+            color: black;
+        }
+
+        .cycle {
+            color: #31975b;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #52685b;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .navbar a:hover {
+            color: #2e9659;
+        }
+
+        /* MAIN */
+
+        .main {
+            min-height: calc(100vh - 158px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 60px 20px;
+
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    #dcefdc 0%,
+                    #f5f9f4 50%
+                );
+        }
+
+        .card {
+            width: 100%;
+            max-width: 600px;
+
+            padding: 50px;
+
+            text-align: center;
+
+            background: white;
+
+            border: 1px solid #e1ebe3;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 20px 45px rgba(45,86,57,0.10);
+        }
+
+        .icon {
+            width: 75px;
+            height: 75px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 20px;
+
+            background: #e5f4e6;
+
+            border-radius: 50%;
+
+            font-size: 36px;
+
+            color: #31975b;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        h1 span {
+            color: #31975b;
+        }
+
+        p {
+            color: #718078;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* BUTTONS */
+
+        .btn {
+            display: inline-block;
+
+            padding: 13px 30px;
+
+            margin: 8px;
+
+            background: #2f9659;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #237846;
+            transform: translateY(-2px);
+        }
+
+        .back-btn {
+            display: inline-block;
+
+            padding: 13px 30px;
+
+            margin: 8px;
+
+            background: #e5f4e6;
+
+            color: #2f9659;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+        }
+
+        .back-btn:hover {
+            background: #d7ebd9;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            padding: 25px;
+
+            background: #102d20;
+
+            color: #aec1b3;
+
+            text-align: center;
+
+            font-size: 12px;
+        }
+
+        @media(max-width:700px) {
+
+            .navbar {
+                display: none;
+            }
+
+            .card {
+                padding: 35px 20px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
 
         <div class="logo">
 
             <span class="logo-icon">&#9851;</span>
 
             <span>
-                <font color="black">Eco</font><font color="green">Cycle</font>
+                <span class="eco">Eco</span><span class="cycle">Cycle</span>
             </span>
 
         </div>
@@ -19,54 +258,61 @@
 
         <nav class="navbar">
 
-            <a href="#">Home</a>
+            <a href="companyhome.html">Home</a>
+
             <a href="#">About</a>
+
             <a href="#">Services</a>
+
             <a href="#">Contact</a>
 
         </nav>
 
     </header>
-        <section class="request-section">
 
-        <div class="request-card">
 
-            <div class="request-icon">
+    <!-- MAIN -->
+
+    <section class="main">
+
+        <div class="card">
+
+            <div class="icon">
                 &#9851;
             </div>
+
 
             <h1>
                 Waste <span>Requests</span>
             </h1>
 
+
             <p>
-                View the waste collection requests submitted by users.
+                View the waste collection requests submitted
+                by users and accept the waste that your company
+                wants to collect.
             </p>
 
 
-            <form action="requestfetch" method="post">
+            <!-- THIS CALLS requestfetch -->
 
-                <input type="submit"
-                       value="Click Here to View the Requests"
-                       class="request-btn">
-
-            </form>
+            <a href="requestfetch" class="btn">
+                View Waste Requests
+            </a>
 
 
-            <div class="back">
+            <!-- BACK TO COMPANY HOME -->
 
-                <a href="companyhome.html">
-                    &#8592; Back
-                </a>
-
-            </div>
+            <a href="companyhome.html" class="back-btn">
+                &#8592; Back
+            </a>
 
         </div>
 
     </section>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- FOOTER -->
 
     <footer class="footer">
 
@@ -75,6 +321,6 @@
 
     </footer>
 
-        
-    </body>
+</body>
+
 </html>

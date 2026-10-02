@@ -17,13 +17,16 @@ public class acceptwaste extends HttpServlet {
         String requestId = req.getParameter("n1");
 
         // Get logged-in company name
-        HttpSession session = req.getSession();
-        String companyName = (String) session.getAttribute("companyName");
+       // Get the existing HTTP session
+HttpSession session = req.getSession(false);
 
-        if (companyName == null) {
-            pw.println("<h2>Company session not found. Please sign in again.</h2>");
-            return;
-        }
+if (session == null || session.getAttribute("companyName") == null) {
+    pw.println("<h2>Company session not found. Please sign in again.</h2>");
+    return;
+}
+
+String companyName = (String) session.getAttribute("companyName");
+String companyId = (String) session.getAttribute("companyId");
 
         Connection con = null;
         PreparedStatement ps = null;
@@ -73,8 +76,6 @@ public class acceptwaste extends HttpServlet {
                 cost = rs.getString("cost");
                 commission = rs.getString("commission");
                 companyCost = rs.getString("company_cost");
-                
-                
                 session.setAttribute("userEmail", email);
                 /*
                  * =========================================
